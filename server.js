@@ -29,7 +29,7 @@ app.get('/api/quotes', (req, res) => {
 app.post('/api/quotes', (req, res) => {
     const {quote, person} = req.query;
 
-    //lests check if the quote and the property exists
+    //lets check if the quote and the property exists
     if(!quote || !person) {
         res.status(400).json({error: 'Both quote and person are requiered.'});
         return;
